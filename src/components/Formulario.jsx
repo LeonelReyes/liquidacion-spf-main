@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Error from './Error'
+import { DatePicker } from '@material-ui/pickers';
 
 function range(start, end) {
     let a = [];
@@ -11,6 +12,13 @@ function range(start, end) {
 
 const arrayAnios = range(0, 35)
 const arrayDescuentoJudicial = range(0, 35)
+let dias = 0
+
+
+
+let months = 30.416666666666668;
+let years = months * 12;
+
 
 
 const Formulario = ({datosAgente, setDatosAgente}) => {
@@ -34,7 +42,9 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
     const [descJudi, setDescJudi] = useState ('');
     const [mesLiqui, setMesLiqui] = useState ('0');
     // const [cobraVar, setCobraVar] = useState (false);
-    
+
+    const [fechaIngreso, setFechaIngreso] = useState("");
+    const [fechaEgreso, setFechaEgreso] = useState("");
     
     const [error, setError] = useState(false)
 
@@ -112,7 +122,24 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
         cobraVar = true
     }
     // console.log(typeof Number (variabilidad))
+    if (fechaIngreso && fechaEgreso != ""){
 
+        dias = Math.floor((fechaEgreso.getTime() - fechaIngreso.getTime()) / 86400000)
+        console.log(dias);
+
+        //calculo 
+        var aniios = Math.floor(dias / years);
+
+        dias = dias - (aniios * years);
+        var meses = Math.floor(dias / months)
+
+        dias = dias - (meses * months);
+        
+
+        console.log(aniios, meses, Math. trunc(dias))
+
+
+    }
 
     return (
 
@@ -225,6 +252,28 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                    
                     </select> 
                 </div>
+
+                <div className="mb-10">
+                    <label htmlFor="fingreso" className="block text-gray-700 uppercase font-bold mb-5" >
+                        Ingrese la fecha de Ingreso
+                    </label> 
+                    <DatePicker value={fechaIngreso} onChange={setFechaIngreso} /> 
+                    
+
+                </div>
+
+                <div className="mb-10">
+                    <label htmlFor="fegreso" className="block text-gray-700 uppercase font-bold mb-5">
+                        Ingrese la fecha de Egreso
+                    </label>  
+                    <DatePicker value={fechaEgreso} onChange={setFechaEgreso}/>
+                    
+                    </div>
+                    
+
+
+
+
 
 
                 <div className="mb-5">
