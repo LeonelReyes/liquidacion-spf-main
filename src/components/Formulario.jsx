@@ -136,7 +136,19 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
         dias = dias - (meses * months);
         
 
-        console.log(aniios, meses, Math. trunc(dias))
+        console.log(aniios, meses, Math.trunc(dias))
+        console.log(typeof(Math.trunc(dias)))
+        console.log(typeof(anios))
+
+        let aniosStr = aniios.toString();
+        console.log(typeof(aniosStr))
+
+
+        
+
+
+
+        
 
 
     }
