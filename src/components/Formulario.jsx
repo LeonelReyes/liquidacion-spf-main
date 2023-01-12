@@ -134,14 +134,18 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
         var meses = Math.floor(dias / months)
 
         dias = dias - (meses * months);
+        dias = Math.trunc(dias)
         
 
-        console.log(aniios, meses, Math.trunc(dias))
+        console.log(aniios, meses, dias)
         console.log(typeof(Math.trunc(dias)))
         console.log(typeof(anios))
 
         let aniosStr = aniios.toString();
         console.log(typeof(aniosStr))
+        console.log(aniosStr)
+
+        
 
 
         
@@ -245,12 +249,12 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                 </div>
 
                 <div className="mb-5">
-                    <label htmlFor="anios" className="block text-gray-700 uppercase font-bold">
+                    <label htmlFor="strAnios" className="block text-gray-700 uppercase font-bold">
                         Ingrese los años de Servicio
                     </label>
 
                    
-                    <select name="anios" id="anios" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                    <select name="strAnios" id="strAnios" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
                         value={anios}
                         onChange={ (e) => setAnios(e.target.value) }
                     >
@@ -265,22 +269,47 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     </select> 
                 </div>
 
-                <div className="mb-10">
-                    <label htmlFor="fingreso" className="block text-gray-700 uppercase font-bold mb-5" >
-                        Ingrese la fecha de Ingreso
-                    </label> 
-                    <DatePicker value={fechaIngreso} onChange={setFechaIngreso} /> 
-                    
+                <div className='grid grid-cols-2 gap-x-4  mx-auto'>
 
+                    <div className="mb-10">
+                        <label htmlFor="fingreso" className="block text-gray-700 uppercase font-bold mb-5" >
+                            Ingrese la fecha de Ingreso
+                        </label> 
+                        <DatePicker 
+                            value={fechaIngreso} 
+                            onChange={setFechaIngreso} 
+                            disableFuture
+                            openTo="year"
+                            format="dd/MM/yyyy"
+                            views={["year", "month", "date"]}
+                        /> 
+                        
+
+                    </div>
+
+                    <div className="mb-10">
+                        <label htmlFor="fegreso" className="block text-gray-700 uppercase font-bold mb-5">
+                            Ingrese la fecha de Egreso
+                        </label>  
+                        <DatePicker 
+                            value={fechaEgreso} 
+                            onChange={setFechaEgreso}
+                            openTo="year"
+                            format="dd/MM/yyyy"
+                            views={["year", "month", "date"]}
+                        />
+                        
+                    </div>
                 </div>
 
-                <div className="mb-10">
-                    <label htmlFor="fegreso" className="block text-gray-700 uppercase font-bold mb-5">
-                        Ingrese la fecha de Egreso
-                    </label>  
-                    <DatePicker value={fechaEgreso} onChange={setFechaEgreso}/>
-                    
-                    </div>
+                    <label htmlFor="antTotal" className="block text-gray-700 uppercase font-bold mb-10">    
+                        Total de años: {aniios} Años,  {meses} meses,  {dias} dias.
+                    </label> 
+
+
+
+
+
                     
 
 
