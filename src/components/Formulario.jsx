@@ -145,6 +145,9 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
         console.log(typeof(aniosStr))
         console.log(aniosStr)
 
+        // document.strAnios.innerHTML.value = aniosStr
+
+
         
 
 
@@ -305,15 +308,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     <label htmlFor="antTotal" className="block text-gray-700 uppercase font-bold mb-10">    
                         Total de años: {aniios} Años,  {meses} meses,  {dias} dias.
                     </label> 
-
-
-
-
-
-                    
-
-
-
+          
 
 
 
