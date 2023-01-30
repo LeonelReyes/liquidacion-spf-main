@@ -22,13 +22,20 @@ const nomGrado = ['Inspector Generl', 'Prefecto', 'Subprefecto', 'Alcaide Mayor'
 const porcObra = [0, 5.5, 6.5, 7.5]
 
 
+const porcentajeOficial = [0.3,	0.34, 0.38, 0.42, 0.46, 0.5, 0.53, 0.56, 0.59, 0.62, 0.65, 0.69, 0.73, 0.77, 0.81, 0.85, 0.88, 0.91, 0.94, 0.97, 1, 1, 1, 1, 1, 1]
+
+const porcentajeSuboficial = [0.3, 0.34, 0.38, 0.42, 0.46, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+
 const Calcular = ({datosAgente, setDatosAgente}) => {
 
-    const { grado, anios, titulo, variabilidad, obra, juicioAnios, juicioTitulo, juicioZona, decreto56, antiguedad, fijacion, zona, subPorFallecimiento, segObligatorio, casino, segColectivo, descJudi, mesLiqui } = datosAgente
+    const { grado, anios, aniosAfuera, titulo, variabilidad, obra, juicioAnios, juicioTitulo, juicioZona, decreto56, antiguedad, fijacion, zona, subPorFallecimiento, segObligatorio, casino, segColectivo, descJudi, mesLiqui } = datosAgente
            
     let totalHaberes = 0
     let totalDescuentos = 0
     let totalSueldoNeto = 0
+
+    let porcentajeMostrar= ''
 
     let haberMensual = 0
     let supAniosDeServicio = 0
@@ -53,7 +60,18 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
         
 
     if (grado){
-        haberMensual = (Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
+        //Aca tenemos que multiplicar por el porcentaje correspondiente a los años de aporte y de afuera       
+        if (grado < 9){
+            haberMensual = (Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui]) * porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10]).toFixed(2)
+            porcentajeMostrar= (porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10])* 100
+        } else if (grado > 8) {
+            haberMensual = (Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui]) * porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10]).toFixed(2)
+            porcentajeMostrar= (porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10])* 100
+        }
+    }
+
+    if (grado){
+        // haberMensual = (Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
         
         if (juicioAnios){
             supAniosDeServicio = ((Number(haberMensual) * 0.02) * Number(anios) ).toFixed(2)
@@ -231,7 +249,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
         <table className="w-full bg-white shadow-xl">
             <tbody className="divide-y divide-gray-200 ">
                 <tr>
-                    <td><h3 className=" text-gray-700 uppercase font-bold m-3">Haber Mensual</h3></td>
+                    <td><h3 className=" text-gray-700 uppercase font-bold m-3">Haber Mensual {porcentajeMostrar} %</h3></td>
                     <td><h4 className="w-auto">$ {haberMensual}</h4></td>
                 </tr>
 

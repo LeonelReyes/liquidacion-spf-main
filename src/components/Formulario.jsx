@@ -25,6 +25,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
 
     const [grado, setGrado] = useState ('');
     const [anios, setAnios] = useState ('');
+    const [aniosAfuera, setAniosAfuera] = useState ('');
     const [titulo, setTitulo] = useState ('');
     const [variabilidad, setVariabilidad] = useState ('0');
     const [obra, setObra] = useState ('1');
@@ -68,6 +69,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
 
             grado,
             anios,
+            aniosAfuera,
             titulo,
             variabilidad,
             obra,
@@ -98,6 +100,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
        // Reiniciar el form
         setGrado('')
         setAnios('')
+        setAniosAfuera('')
         setTitulo('')
         setVariabilidad('0')
         setObra('1')
@@ -272,6 +275,28 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     </select> 
                 </div>
 
+                <div className="mb-5">
+                    <label htmlFor="aniosAfuera" className="block text-gray-700 uppercase font-bold">
+                        Ingrese los años de Aporte extrainstitucionales
+                    </label>
+
+                   
+                    <select name="aniosAfuera" id="aniosAfuera" className="border-2 w-full p-2 mt-2 placeholder-gray-400 rounded-md"
+                        value={aniosAfuera}
+                        onChange={ (e) => setAniosAfuera(e.target.value) }
+                    >
+                        <option value="">--Ingrese los años de Servicio Extrainstitucionales--</option>
+                        {
+                            arrayAnios.map ((item, i) => (
+
+                                <option key= {"arrayAnios" +i } value= {i}> {item}  </option>
+                            ))
+                        }
+                   
+                    </select> 
+
+                </div>
+
                 <div className='grid grid-cols-2 gap-x-4  mx-auto'>
 
                     <div className="mb-10">
@@ -331,7 +356,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     
                 </div>
 
-                <div className="mb-5">
+                {/* <div className="mb-5">
                     <label htmlFor="strVar" className="block text-gray-700 uppercase font-bold">
                         Variabilidad de vivienda
                     </label>
@@ -352,7 +377,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     </select>
               
                      
-                </div>
+                </div> */}
 
                 <div className="mb-5">
                     <label htmlFor="obra" className="block text-gray-700 uppercase font-bold">
@@ -411,7 +436,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                         
                 </div>
                 
-                <div className="flex justify-between py-2 pr-10">
+                {/* <div className="flex justify-between py-2 pr-10">
                     <label htmlFor="decreto56" className="block text-gray-700 uppercase font-bold ">
                         Suma fija Decreto 56/2020
                     </label>
@@ -422,9 +447,9 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     onChange={ (e) => setDecreto56(e.target.checked) }
                     />
                         
-                </div>
+                </div> */}
 
-                <div className="flex justify-between py-2 pr-10">
+                {/* <div className="flex justify-between py-2 pr-10">
                     <label htmlFor="antiguedad" className="block text-gray-700 uppercase font-bold ">
                         Permanencia en el Grado
                     </label>
@@ -448,7 +473,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                         onChange={ (e) => setFijacion(e.target.checked) }
                         disabled = {cobraVar}
                         />  
-                    </div>
+                    </div> */}
 
                 
 
@@ -489,7 +514,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     /> 
                 </div>
 
-                <div className="flex justify-between py-2 pr-10 ">
+                <div className="flex justify-between py-2 pr-10 mb-5">
                     <label htmlFor="segObligatorio" className="block text-gray-700 uppercase font-bold">
                         Seguro Obligatorio
                     </label>
@@ -500,7 +525,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     /> 
                 </div>
 
-                <div className="flex justify-between py-2 pr-10 pb-10">
+                {/* <div className="flex justify-between py-2 pr-10 pb-10">
                     <label htmlFor="casino" className="block text-gray-700 uppercase font-bold">
                         Casino
                     </label>
@@ -509,10 +534,10 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     checked={casino}
                     onChange={ (e) => setCasino(e.target.checked) }
                     /> 
-                </div>
+                </div> */}
 
 
-                    <div className="mb-5 pb-10">
+                    <div className="mb-5 pb-5">
                         <label htmlFor="idDescJudi" className="block text-gray-700 uppercase font-bold">
                             Ingrese el % de Descuento Judicial
                         </label>
