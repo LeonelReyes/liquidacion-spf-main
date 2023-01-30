@@ -258,30 +258,30 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
                     <td><h4 className="w-auto">$ {supAniosDeServicio}</h4></td> 
                 </tr>
 
-                <tr>
+                {/* <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">Suma fija decreto 56/2020</h3></td>
                     <td>$ {sumFijaDecreto56}</td>
-                </tr>
+                </tr> */}
 
-                <tr>
+                {/* <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">Permanencia en el grado</h3></td>
                     <td>$ {supPorAntiguedadEnElGrado}</td> 
-                </tr>
+                </tr> */}
 
                 <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">bonificacion por titulo</h3></td>
                     <td>$ {bonificacionPorTitulo}</td>
                 </tr>
 
-                <tr>
+                {/* <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">Comp. Fijacion de domicilio</h3></td>
                     <td>$ {compPorFijacionDeDomicilio}</td>
-                </tr>
+                </tr> */}
 
-                <tr>
+                {/* <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">variabilidad de vivienda</h3></td>
                     <td>$ {bonVariabilidad}</td>
-                </tr>
+                </tr> */}
 
                 <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">zona sur</h3></td>
@@ -332,10 +332,10 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">Seguro Colectivo</h3></td>
                     <td>$ {descSegColectivo}</td>
                 </tr>
-                <tr>
+                {/* <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">Casino</h3></td>
                     <td>$ {descCasino}</td>
-                </tr>
+                </tr> */}
                 <tr>
                     <td><h3 className=" text-gray-700 uppercase font-bold m-3">Descuentos Judiciales</h3></td>
                     <td>$ {descJudicial}</td>

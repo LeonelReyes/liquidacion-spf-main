@@ -37,7 +37,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
     const [fijacion, setFijacion] = useState (false);
     const [zona, setZona] = useState (false);
     const [segObligatorio, setSegObligatorio] = useState (true);
-    const [casino, setCasino] = useState (true);
+    const [casino, setCasino] = useState (false);
     const [subPorFallecimiento, setSubPorFallecimiento] = useState (true);
     const [segColectivo, setSegColectivo] = useState (false);
     const [descJudi, setDescJudi] = useState ('');
@@ -112,7 +112,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
         setFijacion(false)
         setZona(false)
         setSegObligatorio(true)
-        setCasino(true)
+        setCasino(false)
         setSubPorFallecimiento(true)
         setSegColectivo(false)
         setDescJudi('')
