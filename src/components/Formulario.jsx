@@ -305,7 +305,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     </div>
                 </div>
 
-                    <label htmlFor="antTotal" className="block text-gray-700 uppercase font-bold mb-10">    
+                    <label htmlFor="antTotal" className="block text-gray-700 uppercase font-bold mb-10" >    
                         Total de años: {aniios} Años,  {meses} meses,  {dias} dias.
                     </label> 
           
@@ -363,9 +363,9 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                         value={obra}
                         onChange={ (e) => setObra(e.target.value) }
                     >
-                       <option value="1">7.5 %</option>
-                       <option value="2">8.5 %</option>
-                       <option value="3">9.5 %</option>
+                       <option value="1">5.5 %</option>
+                       <option value="2">6.5 %</option>
+                       <option value="3">7.5 %</option>
                                               
                     </select>
               

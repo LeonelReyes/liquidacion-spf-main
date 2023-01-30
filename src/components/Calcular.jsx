@@ -19,7 +19,7 @@ const pocentajeAumento = [1.32, 1.40, 1.50, 1.60]
 
 const nomGrado = ['Inspector Generl', 'Prefecto', 'Subprefecto', 'Alcaide Mayor', 'Alcaide', 'Subalcaide', 'Adjutor Principal', 'Adjutor', 'Subadjutor', 'Ayudante Mayor', 'Ayudante Principal', 'Ayudante de 1ra.', 'Ayudante de 2da.', 'Ayudante de 3ra.', 'Ayudante de 4ta.', 'Ayudante de 5ta.', 'Subayudante']
 
-const porcObra = [0, 7.5, 8.5, 9.5]
+const porcObra = [0, 5.5, 6.5, 7.5]
 
 
 const Calcular = ({datosAgente, setDatosAgente}) => {
@@ -62,8 +62,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
             supAniosDeServicio = ((Number(haberMensual) * 0.005) * Number(anios) ).toFixed(2)        
         }
         
-        // supAniosDeServicio = ((Number(haberMensual) * 0.005) * Number(anios) ).toFixed(2)        
-        // console.log(pocentajeAumento[mesLiqui])
+        
     }
 
                         
@@ -105,19 +104,19 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
                             Number(sumFijaDecreto56) +
                             Number(supPorAntiguedadEnElGrado) +
                             Number(bonificacionPorTitulo) +
-                            Number(supAniosDeServicio))* 0.075).toFixed(2)
+                            Number(supAniosDeServicio))* 0.055).toFixed(2)
     } else if (obra == 2) {
         aporteObraSocial = ((Number(haberMensual) + 
                             Number(sumFijaDecreto56) +
                             Number(supPorAntiguedadEnElGrado) +
                             Number(bonificacionPorTitulo) +
-                            Number(supAniosDeServicio))* 0.085).toFixed(2)
+                            Number(supAniosDeServicio))* 0.065).toFixed(2)
     } else if (obra == 3) {
         aporteObraSocial = ((Number(haberMensual) + 
                             Number(sumFijaDecreto56) +
                             Number(supPorAntiguedadEnElGrado) +
                             Number(bonificacionPorTitulo) +
-                            Number(supAniosDeServicio))* 0.095).toFixed(2)
+                            Number(supAniosDeServicio))* 0.075).toFixed(2)
     }
     
     if (grado){
@@ -125,7 +124,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
                             Number(sumFijaDecreto56) +
                             Number(supPorAntiguedadEnElGrado) +
                             Number(bonificacionPorTitulo) +
-                            Number(supAniosDeServicio))* 0.10).toFixed(2)
+                            Number(supAniosDeServicio))* 0.08).toFixed(2)
     }
       
     
@@ -295,7 +294,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
         <table className="w-full bg-white shadow-xl">
             <tbody className="divide-y divide-gray-200 ">
                 <tr>
-                    <td><h3 className=" text-gray-700 uppercase font-bold m-3">Aporte Jubilatorio 10%</h3></td>
+                    <td><h3 className=" text-gray-700 uppercase font-bold m-3">Aporte Jubilatorio 8 %</h3></td>
                     <td><h4 className="w-auto">$ {aporteJubilatorio}</h4></td>
                 </tr>
                 <tr>
