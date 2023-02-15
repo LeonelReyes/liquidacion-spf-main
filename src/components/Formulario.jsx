@@ -180,27 +180,27 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     Seleccione el Mes de liquidacion
                 </label>
                    
-                <ul className="grid grid-cols-4 gap-x-4  mx-auto mb-10">
+                <ul className="grid grid-cols-2 gap-x-4  mx-auto mb-10">
                     <li className="relative">
-                        <input className="sr-only peer" type="radio" value="0" name="radioMes" id="idJulio"
+                        <input className="sr-only peer" type="radio" value="0" name="radioMes" id="idEnero"
                         
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idJulio">Julio 32%</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idEnero">Enero</label>
 
                         
                     </li>
 
                     <li className="relative">
-                        <input className="sr-only peer" type="radio" value="1" name="radioMes" id="idOctubre" 
+                        <input className="sr-only peer" type="radio" value="1" name="radioMes" id="idMarzo" 
                         
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idOctubre">Octubre 8%</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idMarzo">Marzo 23.13%</label>
                         
 
                     </li>
-                    <li className="relative">
+                    {/* <li className="relative">
                         <input className="sr-only peer" type="radio" value="2" name="radioMes" id="idEnero"
                         
                         onChange={ (e) => setMesLiqui(e.target.value) }
@@ -216,7 +216,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                         <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idMarzo">Enero 10%</label>
 
                         
-                    </li>
+                    </li> */}
                 </ul>                    
 
 
