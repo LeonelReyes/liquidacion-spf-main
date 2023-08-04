@@ -181,40 +181,29 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                 </label>
                    
                 <ul className="grid grid-cols-3 gap-x-4  mx-auto mb-10">
-                    <li className="relative">
-                        <input className="sr-only peer" type="radio" value="0" name="radioMes" id="idJunio"
-                        
-                        onChange={ (e) => setMesLiqui(e.target.value) }
-                        />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idJunio">Junio 5.5%</label>
-
-                        
-                    </li>
-
-                    <li className="relative">
-                        <input className="sr-only peer" type="radio" value="1" name="radioMes" id="idJulio" 
-                        
-                        onChange={ (e) => setMesLiqui(e.target.value) }
-                        />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idJulio">Julio 29.3%</label>
-                        
-
-                    </li>
-                    <li className="relative">
+                <li className="relative">
                         <input className="sr-only peer" type="radio" value="2" name="radioMes" id="idAgosto"
                         
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idAgosto">Agosto 2.9%</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idAgosto">Agosto 2.9% 1% SAS</label>
                         
                     </li>
-                    {/* <li className="relative">
-                        <input className="sr-only peer" type="radio" value="3" name="radioMes" id="idSeptiembre"
+                    <li className="relative">
+                        <input className="sr-only peer" type="radio" value="3" name="radioMes" id="idOctubre"
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idSeptiembre">Septiembre 12%</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idOctubre">Octubre 1.5% SAS</label>
                         
-                    </li> */}
+                    </li>
+
+                    <li className="relative">
+                        <input className="sr-only peer" type="radio" value="4" name="radioMes" id="idDiciembre"
+                        onChange={ (e) => setMesLiqui(e.target.value) }
+                        />
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idDiciembre">Diciembre 2% SAS</label>
+                        
+                    </li>
                 </ul>                     
 
 
@@ -395,7 +384,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                      
                 </div>
 
-                <div className="flex justify-between py-2 pr-10">
+                {/* <div className="flex justify-between py-2 pr-10">
                     <label htmlFor="idJuicioAnios" className="block text-gray-700 uppercase font-bold ">
                         Con el 2 % por año de Servicio 
                     </label>
@@ -406,9 +395,9 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     onChange={ (e) => setJuicioAnios(e.target.checked) }
                     />
                         
-                </div>
+                </div> */}
 
-                <div className="flex justify-between py-2 pr-10">
+                {/* <div className="flex justify-between py-2 pr-10">
                     <label htmlFor="idJuicioTitulo" className="block text-gray-700 uppercase font-bold ">
                         Juicio Título 
                     </label>
@@ -419,7 +408,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     onChange={ (e) => setJuicioTitulo(e.target.checked) }
                     />
                         
-                </div>
+                </div> */}
 
                 <div className="flex justify-between py-2 pr-10">
                     <label htmlFor="idJuicioZona" className="block text-gray-700 uppercase font-bold ">

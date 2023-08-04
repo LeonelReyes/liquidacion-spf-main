@@ -15,7 +15,9 @@ const compFijacion = [49063, 49063, 49063, 36799, 36799, 24532]
 
 const zonaSur = [0, 29422, 26100, 20882, 18035, 15185, 13761, 13522, 13048, 17557, 15658, 14237, 13996, 13761, 13289, 12810, 12573]
     
-const pocentajeAumento = [1, 1.293, 1.3306]
+const pocentajeAumento = [1, 1.293, 1.3306, 1.3306, 1.3306]
+
+const porcetajeSAS = [0.005, 0.005, 0.01, 0.015, 0.02]
 
 
 const nomGrado = ['Inspector General', 'Prefecto', 'Subprefecto', 'Alcaide Mayor', 'Alcaide', 'Subalcaide', 'Adjutor Principal', 'Adjutor', 'Subadjutor', 'Ayudante Mayor', 'Ayudante Principal', 'Ayudante de 1ra.', 'Ayudante de 2da.', 'Ayudante de 3ra.', 'Ayudante de 4ta.', 'Ayudante de 5ta.', 'Subayudante']
@@ -73,41 +75,47 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
 
     if (grado){
         // haberMensual = (Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
-        
-        if (juicioAnios){
-            supAniosDeServicio = ((Number(haberMensual) * 0.02) * Number(anios) ).toFixed(2)
-        }else if (!juicioAnios){
+        supAniosDeServicio = ((Number(haberMensual) * Number(porcetajeSAS[mesLiqui])) * Number(anios) ).toFixed(2)
+        // if (juicioAnios){
+        //     supAniosDeServicio = ((Number(haberMensual) * 0.02) * Number(anios) ).toFixed(2)
+        // }else if (!juicioAnios){
             
-            supAniosDeServicio = ((Number(haberMensual) * 0.005) * Number(anios) ).toFixed(2)        
-        }
+        //     supAniosDeServicio = ((Number(haberMensual) * 0.005) * Number(anios) ).toFixed(2)        
+        // }
         
         
     }
 
                         
-    
-
-
-    if (juicioTitulo){
-
-        if (titulo == 1){
-            bonificacionPorTitulo = (Number(haberMensual) * 0.15).toFixed(2)
-        }else if (titulo ==2){
-            bonificacionPorTitulo = (Number(haberMensual) * 0.25).toFixed(2)
-        }else if (titulo == 3){
-            bonificacionPorTitulo = (Number(haberMensual) * 0.25).toFixed(2)
-        }
-
-    }else if (!juicioTitulo){
-   
-        if (titulo == 1){
-            bonificacionPorTitulo = (Number(titTerciario[grado]) * Number(pocentajeAumento[mesLiqui])).toFixed(2)
-        }else if (titulo ==2){
-            bonificacionPorTitulo = (Number(titUniversitario[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
-        }else if (titulo == 3){
-            bonificacionPorTitulo = (Number(titPosgrado[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
-        }
+    if (titulo == 1){
+        bonificacionPorTitulo = (Number(haberMensual) * 0.15).toFixed(2)
+    }else if (titulo ==2){
+        bonificacionPorTitulo = (Number(haberMensual) * 0.25).toFixed(2)
+    }else if (titulo == 3){
+        bonificacionPorTitulo = (Number(haberMensual) * 0.25).toFixed(2)
     }
+
+
+    // if (juicioTitulo){
+
+    //     if (titulo == 1){
+    //         bonificacionPorTitulo = (Number(haberMensual) * 0.15).toFixed(2)
+    //     }else if (titulo ==2){
+    //         bonificacionPorTitulo = (Number(haberMensual) * 0.25).toFixed(2)
+    //     }else if (titulo == 3){
+    //         bonificacionPorTitulo = (Number(haberMensual) * 0.25).toFixed(2)
+    //     }
+
+    // }else if (!juicioTitulo){
+   
+    //     if (titulo == 1){
+    //         bonificacionPorTitulo = (Number(titTerciario[grado]) * Number(pocentajeAumento[mesLiqui])).toFixed(2)
+    //     }else if (titulo ==2){
+    //         bonificacionPorTitulo = (Number(titUniversitario[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
+    //     }else if (titulo == 3){
+    //         bonificacionPorTitulo = (Number(titPosgrado[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
+    //     }
+    // }
 
     
     if(antiguedad){
