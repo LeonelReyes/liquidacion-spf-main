@@ -180,20 +180,20 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     Seleccione el Mes de liquidacion
                 </label>
                    
-                <ul className="grid grid-cols-3 gap-x-4  mx-auto mb-10">
-                <li className="relative">
+                <ul className="grid grid-cols-2 gap-x-4  mx-auto mb-10">
+                {/* <li className="relative">
                         <input className="sr-only peer" type="radio" value="2" name="radioMes" id="idAgosto"
                         
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
                         <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idAgosto">Agosto 2.9% 1% SAS</label>
                         
-                    </li>
+                    </li> */}
                     <li className="relative">
                         <input className="sr-only peer" type="radio" value="3" name="radioMes" id="idOctubre"
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idOctubre">Octubre 1.5% SAS</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idOctubre">Octubre 23.21% + 1.5% SAS</label>
                         
                     </li>
 

@@ -65,10 +65,10 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
     if (grado){
         //Aca tenemos que multiplicar por el porcentaje correspondiente a los años de aporte y de afuera       
         if (grado < 9){
-            haberMensual = ((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10]).toFixed(2)
+            haberMensual = (((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10])*1.2321).toFixed(2)
             porcentajeMostrar= (porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10])* 100
         } else if (grado > 8) {
-            haberMensual = ((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10]).toFixed(2)
+            haberMensual = (((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10])*1.2321).toFixed(2)
             porcentajeMostrar= (porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10])* 100
         }
     }
@@ -175,7 +175,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
     }
 
     if(subPorFallecimiento){
-        descSubPorFallecimiento = 481.26
+        descSubPorFallecimiento = 887.23
     }
 
     if(segObligatorio){
