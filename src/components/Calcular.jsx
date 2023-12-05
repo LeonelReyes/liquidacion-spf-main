@@ -1,21 +1,18 @@
-const haberesPorGrado = [678187, 599987, 538591, 440276, 394722, 333422, 285407, 251481, 233923, 381725, 340112, 314820, 276390, 259401, 246640,235014, 224054, 93000, 90204]
+const haberesPorGrado = [1332995, 1179291, 1058615, 865375, 775838, 655351, 560975, 494293, 459781, 750291, 668499, 618787, 543253, 509859,484778, 461926, 440384, 182794, 177299]
 
     
 
-const titTerciario = [24199, 22297, 19927, 15658, 13761, 11388, 10912, 10436, 9961, 13289, 11862, 10912, 10436, 10204, 9961, 9728, 9490]
+const titTerciario = [199950, 176894, 158793, 129806, 116376, 98304, 84146, 74145, 68968, 112544, 100275, 92819, 81489, 76479, 72718, 69289, 66059]
 
-const titUniversitario = [40328, 37015, 32741, 26100, 22538, 18981, 17557, 17084, 16607, 21824, 19453, 18035, 17557, 17084, 16607, 16134, 15658]
+const titUniversitario = [333250, 294823, 264654, 216344, 193961, 163839, 140245, 123574, 114946, 187573, 167125, 154697, 135813, 127464, 121195, 115483, 110096]
 
-const titPosgrado = [44603, 40806, 36061, 28945, 25150, 20882, 19453, 18981, 18504, 24199, 21824, 19927, 19453, 18981, 18504, 18035, 17557]
-
-
-const cargasVariabilidad = [28216, 38031]
+const cargasVariabilidad = [55459, 74750]
 
 const compFijacion = [49063, 49063, 49063, 36799, 36799, 24532]
 
-const zonaSur = [0, 29422, 26100, 20882, 18035, 15185, 13761, 13522, 13048, 17557, 15658, 14237, 13996, 13761, 13289, 12810, 12573]
+const zonaSur = [0, 51300, 41043, 35447, 29846, 27048, 26578, 25645, 34508, 30776, 27982, 27510, 27048, 26120, 25178, 24713]
     
-const pocentajeAumento = [1, 1.293, 1.3306, 1.3306, 1.3306]
+const pocentajeAumento = [1, 1, 1, 1, 1]
 
 const porcetajeSAS = [0.005, 0.005, 0.01, 0.015, 0.02]
 
@@ -65,17 +62,17 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
     if (grado){
         //Aca tenemos que multiplicar por el porcentaje correspondiente a los años de aporte y de afuera       
         if (grado < 9){
-            haberMensual = (((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10])*1.2321).toFixed(2)
+            haberMensual = (((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10])).toFixed(2)
             porcentajeMostrar= (porcentajeOficial [(Number(anios) + Number(aniosAfuera)) - 10])* 100
         } else if (grado > 8) {
-            haberMensual = (((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10])*1.2321).toFixed(2)
+            haberMensual = (((Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])) * porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10])).toFixed(2)
             porcentajeMostrar= (porcentajeSuboficial [(Number(anios)+ Number(aniosAfuera)) - 10])* 100
         }
     }
 
     if (grado){
         // haberMensual = (Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
-        supAniosDeServicio = ((Number(haberMensual) * Number(porcetajeSAS[mesLiqui])) * Number(anios) ).toFixed(2)
+        supAniosDeServicio = ((Number(haberMensual) * 0.02)) * Number(anios).toFixed(2)
         // if (juicioAnios){
         //     supAniosDeServicio = ((Number(haberMensual) * 0.02) * Number(anios) ).toFixed(2)
         // }else if (!juicioAnios){
