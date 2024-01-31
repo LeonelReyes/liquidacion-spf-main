@@ -201,7 +201,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                         <input className="sr-only peer" type="radio" value="4" name="radioMes" id="idDiciembre"
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         checked/>
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idDiciembre">Diciembre 2% SAS, 19.9%</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idDiciembre">Febrero 16 %</label>
                         
                     </li>
                 </ul>                     

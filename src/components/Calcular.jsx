@@ -1,16 +1,16 @@
-const haberesPorGrado = [1332995, 1179291, 1058615, 865375, 775838, 655351, 560975, 494293, 459781, 750291, 668499, 618787, 543253, 509859,484778, 461926, 440384, 182794, 177299]
+const haberesPorGrado = [1546274.20, 1367977.56, 1227993.40, 1003835, 899972.08, 760207.16, 650731, 573379.88, 533345.96, 870337.56, 775458.84, 717792.92, 630173.48, 591436.44, 562342.48, 535834.16, 510845.44, 212041.04, 205666.84]
 
-    
+   
 
-const titTerciario = [199950, 176894, 158793, 129806, 116376, 98304, 84146, 74145, 68968, 112544, 100275, 92819, 81489, 76479, 72718, 69289, 66059]
+const titTerciario = [231942, 205197.04, 184199.88, 150574.96, 134996.16, 114032.64, 97609.36, 86008.20, 80002.88, 130551.04, 116319, 107670.04, 94527.24, 88715.64, 84352.88, 80375.24, 76628.44]
 
-const titUniversitario = [333250, 294823, 264654, 216344, 193961, 163839, 140245, 123574, 114946, 187573, 167125, 154697, 135813, 127464, 121195, 115483, 110096]
+const titUniversitario = [386570, 341994.68, 306998.64, 250959.04, 224994.76, 190053.24, 162684.20, 143345.84, 133337.36, 217584.68, 193865, 179448.52, 157543.08, 147858.24, 140586.20, 133960.28, 127711.36]
 
-const cargasVariabilidad = [55459, 74750]
+const cargasVariabilidad = [64332.44, 86710]
 
-const compFijacion = [49063, 49063, 49063, 36799, 36799, 24532]
+const compFijacion = [111863.44, 111863.44, 111863.44, 83902.80, 83902.80, 55934.04]
 
-const zonaSur = [0, 51300, 41043, 35447, 29846, 27048, 26578, 25645, 34508, 30776, 27982, 27510, 27048, 26120, 25178, 24713]
+const zonaSur = [0, 67082.80, 59508, 47609.88, 41118.52, 34621.36, 31375.68, 30830.48, 29748.20, 40029.28, 35700.16, 32459.12, 31911.60, 31375.68, 30299.20, 29206.48, 28667.08]
     
 const pocentajeAumento = [1, 1, 1, 1, 1]
 
@@ -72,7 +72,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
 
     if (grado){
         // haberMensual = (Number(haberesPorGrado[grado])* Number(pocentajeAumento[mesLiqui])).toFixed(2)
-        supAniosDeServicio = ((Number(haberMensual) * 0.02)) * Number(anios).toFixed(2)
+        supAniosDeServicio = (((Number(haberMensual) * 0.02)) * Number(anios)).toFixed(2)
         // if (juicioAnios){
         //     supAniosDeServicio = ((Number(haberMensual) * 0.02) * Number(anios) ).toFixed(2)
         // }else if (!juicioAnios){
@@ -166,7 +166,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
 
 
     if(juicioZona ){
-        supZonaSur = (Number(haberMensual) * 0.45 ).toFixed(2)
+        supZonaSur = (Number(haberMensual) * 0.40 ).toFixed(2)
     }else if (zona){
         supZonaSur = Number(zonaSur[Number(grado)])* Number(pocentajeAumento[mesLiqui])
     }
