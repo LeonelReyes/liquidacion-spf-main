@@ -206,7 +206,7 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     </li>
 
                     <li className="relative">
-                        <input className="sr-only peer" type="radio" value="4" name="radioMes" id="idMarzo"
+                        <input className="sr-only peer" type="radio" value="5" name="radioMes" id="idMarzo"
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
                         <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idMarzo">Marzo 12 %</label>
