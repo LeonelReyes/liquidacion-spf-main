@@ -198,18 +198,18 @@ const Formulario = ({datosAgente, setDatosAgente}) => {
                     </li> */}
 
                     <li className="relative">
-                        <input className="sr-only peer" type="radio" value="4" name="radioMes" id="idDiciembre"
+                        <input className="sr-only peer" type="radio" value="0" name="radioMes" id="idMayo"
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         checked/>
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idDiciembre">Febrero 16 %</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idMayo">Mayo 2024</label>
                         
                     </li>
 
                     <li className="relative">
-                        <input className="sr-only peer" type="radio" value="5" name="radioMes" id="idMarzo"
+                        <input className="sr-only peer" type="radio" value="1" name="radioMes" id="idJunio"
                         onChange={ (e) => setMesLiqui(e.target.value) }
                         />
-                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idMarzo">Marzo 12 %</label>
+                        <label className="flex p-5 bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none hover:bg-gray-50 peer-checked:ring-blue-500 peer-checked:ring-2 peer-checked:border-transparent justify-center" htmlFor="idJunio">Junio 9.1 %</label>
                         
                     </li>
                 </ul>                     
