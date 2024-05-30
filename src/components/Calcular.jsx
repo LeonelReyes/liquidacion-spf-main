@@ -170,7 +170,7 @@ const Calcular = ({datosAgente, setDatosAgente}) => {
     }
 
     if(subPorFallecimiento){
-        descSubPorFallecimiento = 887.23
+        descSubPorFallecimiento = 1839
     }
 
     if(segObligatorio){
